@@ -2,6 +2,8 @@
 
 **Learn Together. Build Together. Grow Together.**
 
+Author: Nitesh Tanawade
+
 A collaborative academic platform. Students find compatible learning partners, run study groups and work on projects together. Verified teachers mentor students and set assignments. Administrators manage the platform.
 
 ## Main features

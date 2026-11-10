@@ -1,0 +1,9 @@
+/*
+  Tailwind for components copied into components/ui only.
+  No preflight, and no scanning of the rest of the app: names such as "table" and
+  "hidden" are already used by styles.css and must not gain Tailwind's meaning.
+  Utilities stay unlayered so they can override the element rules in styles.css.
+*/
+@import "tailwindcss/theme.css";
+@import "tailwindcss/utilities.css" source(none);
+@source "./components/ui";

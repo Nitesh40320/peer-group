@@ -1,0 +1,33 @@
+{
+  "name": "peerconnect",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Collaborative academic learning and student networking platform",
+  "type": "module",
+  "engines": { "node": ">=22" },
+  "workspaces": ["model", "backend", "frontend"],
+  "scripts": {
+    "setup:env": "node scripts/setup-env.mjs",
+    "db:local": "node scripts/local-db.mjs start",
+    "db:local:stop": "node scripts/local-db.mjs stop",
+    "db:migrate": "npm run migrate -w backend",
+    "db:seed": "npm run seed -w backend",
+    "db:seed:demo": "npm run seed:demo -w backend",
+    "admin:create": "npm run admin:create -w backend --",
+    "dev": "node scripts/dev.mjs",
+    "build": "npm run build -w model && npm run build -w frontend && npm run build -w backend",
+    "start": "npm run start -w backend",
+    "lint": "eslint model/src backend/src backend/test frontend/src e2e",
+    "typecheck": "npm run typecheck -w model && npm run typecheck -w backend && npm run typecheck -w frontend",
+    "test": "npm run test -w backend",
+    "test:e2e": "playwright test --config e2e/playwright.config.ts",
+    "openapi": "npm run openapi -w backend"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.17.0",
+    "@playwright/test": "^1.49.0",
+    "eslint": "^9.17.0",
+    "typescript": "^5.7.2",
+    "typescript-eslint": "^8.18.0"
+  }
+}

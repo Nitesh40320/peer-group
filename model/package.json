@@ -1,0 +1,21 @@
+{
+  "name": "@peerconnect/model",
+  "private": true,
+  "version": "1.0.0",
+  "description": "AI assistant and study-partner matching, used by the backend",
+  "type": "module",
+  "exports": {
+    ".": {
+      "source": "./src/index.ts",
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^1.6.0"
+  }
+}
